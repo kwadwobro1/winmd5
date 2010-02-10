@@ -1,0 +1,106 @@
+object Form2: TForm2
+  Left = 426
+  Height = 395
+  Top = 337
+  Width = 462
+  Caption = 'verify'
+  ClientHeight = 395
+  ClientWidth = 462
+  OnCreate = FormCreate
+  LCLVersion = '0.9.29'
+  object Label1: TLabel
+    Left = 10
+    Height = 14
+    Top = 13
+    Width = 39
+    Caption = 'Hashfile'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 56
+    Height = 21
+    Top = 13
+    Width = 288
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 360
+    Height = 25
+    Top = 13
+    Width = 75
+    Caption = '&Open'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object ComboBox1: TComboBox
+    Left = 56
+    Height = 21
+    Top = 40
+    Width = 100
+    ItemHeight = 13
+    ItemIndex = 0
+    Items.Strings = (
+      'Autodetect'
+      'MD5'
+      'SHA1'
+      'CRC32/SFV'
+    )
+    Style = csDropDownList
+    TabOrder = 2
+    Text = 'Autodetect'
+  end
+  object Label2: TLabel
+    Left = 6
+    Height = 14
+    Top = 45
+    Width = 47
+    Caption = 'Hashtype'
+    ParentColor = False
+  end
+  object ListBox1: TListBox
+    Left = 8
+    Height = 248
+    Top = 72
+    Width = 424
+    ItemHeight = 0
+    TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 191
+    Height = 25
+    Top = 40
+    Width = 75
+    Caption = '&Start verify'
+    OnClick = Button2Click
+    TabOrder = 4
+  end
+  object creator: TLabel
+    Left = 11
+    Height = 14
+    Top = 328
+    Width = 36
+    Caption = 'creator'
+    ParentColor = False
+  end
+  object comment: TLabel
+    Left = 14
+    Height = 14
+    Top = 346
+    Width = 44
+    Caption = 'comment'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 14
+    Height = 14
+    Top = 367
+    Width = 1
+    ParentColor = False
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.md'
+    Filter = 'All hash type|*.md5;*.sha;*.sfv|*.md|*.md5|*.sha|*.sha|*.sfv|*.sfv|*.*|*.*'
+    left = 344
+    top = 4
+  end
+end
