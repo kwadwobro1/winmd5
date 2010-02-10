@@ -1,0 +1,28 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TForm2','FORMDATA',[
+  'TPF0'#6'TForm2'#5'Form2'#4'Left'#3#170#1#6'Height'#3#139#1#3'Top'#3'Q'#1#5'W'
+  +'idth'#3#206#1#7'Caption'#6#6'verify'#12'ClientHeight'#3#139#1#11'ClientWidt'
+  +'h'#3#206#1#8'OnCreate'#7#10'FormCreate'#10'LCLVersion'#6#6'0.9.29'#0#6'TLab'
+  +'el'#6'Label1'#4'Left'#2#10#6'Height'#2#14#3'Top'#2#13#5'Width'#2''''#7'Capt'
+  +'ion'#6#8'Hashfile'#11'ParentColor'#8#0#0#5'TEdit'#5'Edit1'#4'Left'#2'8'#6'H'
+  +'eight'#2#21#3'Top'#2#13#5'Width'#3' '#1#8'TabOrder'#2#0#0#0#7'TButton'#7'Bu'
+  +'tton1'#4'Left'#3'h'#1#6'Height'#2#25#3'Top'#2#13#5'Width'#2'K'#7'Caption'#6
+  +#5'&Open'#7'OnClick'#7#12'Button1Click'#8'TabOrder'#2#1#0#0#9'TComboBox'#9'C'
+  +'omboBox1'#4'Left'#2'8'#6'Height'#2#21#3'Top'#2'('#5'Width'#2'd'#10'ItemHeig'
+  +'ht'#2#13#9'ItemIndex'#2#0#13'Items.Strings'#1#6#10'Autodetect'#6#3'MD5'#6#4
+  +'SHA1'#6#9'CRC32/SFV'#0#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#2#4'Text'
+  +#6#10'Autodetect'#0#0#6'TLabel'#6'Label2'#4'Left'#2#6#6'Height'#2#14#3'Top'#2
+  +'-'#5'Width'#2'/'#7'Caption'#6#8'Hashtype'#11'ParentColor'#8#0#0#8'TListBox'
+  +#8'ListBox1'#4'Left'#2#8#6'Height'#3#248#0#3'Top'#2'H'#5'Width'#3#168#1#10'I'
+  +'temHeight'#2#0#8'TabOrder'#2#3#0#0#7'TButton'#7'Button2'#4'Left'#3#191#0#6
+  +'Height'#2#25#3'Top'#2'('#5'Width'#2'K'#7'Caption'#6#13'&Start verify'#7'OnC'
+  +'lick'#7#12'Button2Click'#8'TabOrder'#2#4#0#0#6'TLabel'#7'creator'#4'Left'#2
+  +#11#6'Height'#2#14#3'Top'#3'H'#1#5'Width'#2'$'#7'Caption'#6#7'creator'#11'Pa'
+  +'rentColor'#8#0#0#6'TLabel'#7'comment'#4'Left'#2#14#6'Height'#2#14#3'Top'#3
+  +'Z'#1#5'Width'#2','#7'Caption'#6#7'comment'#11'ParentColor'#8#0#0#6'TLabel'#6
+  +'Label3'#4'Left'#2#14#6'Height'#2#14#3'Top'#3'o'#1#5'Width'#2#1#11'ParentCol'
+  +'or'#8#0#0#11'TOpenDialog'#11'OpenDialog1'#10'DefaultExt'#6#3'.md'#6'Filter'
+  +#6'JAll hash type|*.md5;*.sha;*.sfv|*.md|*.md5|*.sha|*.sha|*.sfv|*.sfv|*.*|*'
+  +'.*'#4'left'#3'X'#1#3'top'#2#4#0#0#0
+]);
