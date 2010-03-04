@@ -36,8 +36,11 @@ type
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
+    verify : boolean;
+    hashdatei:string;
     procedure MD5_erstellen;
     procedure SHA1_erstellen;
     procedure CRC32_erstellen;
@@ -50,7 +53,7 @@ var
   Form1: TForm1;
 
 const
-  version: string = '0.1 opensource';
+  version: string = '0.1.1 opensource';
 
 implementation
 
@@ -367,27 +370,32 @@ end;
 
 procedure TForm1.Button5Click(Sender: TObject);
 begin
-  form2.ShowModal;
+    form2.ShowModal;
+end;
+
+procedure TForm1.FormActivate(Sender: TObject);
+begin
+ if verify then
+  begin
+   form2.Edit1.Text:=hashdatei;
+   hashdatei:='';
+   form2.ShowModal;
+   end;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
-var
-  i: byte;
-  verify: boolean;
+var i: byte;
 begin
   verify := False;
   Form1.Caption := 'WinHash (c) ' + version + ' by Dirk Paehl';
   if paramcount > 0 then
   begin
-    for i := 0 to paramcount do
+    for i := 1 to paramcount do
     begin
-      if uppercase(PChar(ParamStr(i))) = '/V' then
-        verify := True;
-      if fileexists(ParamStr(i)) then
-        form2.Edit1.Text := ParamStr(i);
+      if fileExists(ParamStr(i)) then begin verify := True; hashdatei:=ParamStr(i); break; end;
+      if uppercase(PChar(ParamStr(i))) = '/V' then verify := True;
+      if DirectoryExists (ParamStr(i)) then Edit1.Text := Check(ParamStr(i));
     end;
-    if verify then
-      form2.ShowModal;
   end;
 end;
 
