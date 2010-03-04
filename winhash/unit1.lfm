@@ -6,6 +6,7 @@ object Form1: TForm1
   ActiveControl = ListBox1
   ClientHeight = 483
   ClientWidth = 441
+  OnActivate = FormActivate
   OnCreate = FormCreate
   LCLVersion = '0.9.29'
   object Label1: TLabel

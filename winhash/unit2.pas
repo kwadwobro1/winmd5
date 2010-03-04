@@ -15,6 +15,7 @@ type
   TForm2 = class(TForm)
     Button1: TButton;
     Button2: TButton;
+    Button3: TButton;
     ComboBox1: TComboBox;
     Edit1: TEdit;
     Label1: TLabel;
@@ -26,7 +27,7 @@ type
     OpenDialog1: TOpenDialog;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     procedure md5;
     procedure sha1;
@@ -361,6 +362,7 @@ begin
      while not EOF(f) do
      begin
       readln(f,hilf);
+      ergebnis:=5;
       if hilf[1]<>';' then
         begin
         closefile(f);
@@ -372,9 +374,8 @@ begin
          end;
         break;
        end;
-     closefile(f);
     end;
-
+     if ergebnis = 5 then closefile(f);
     end;
     1: md5;
     2: sha1;
@@ -382,9 +383,10 @@ begin
   end;
 end;
 
-procedure TForm2.FormCreate(Sender: TObject);
+procedure TForm2.Button3Click(Sender: TObject);
 begin
-
+  close;
+  application.Terminate;;
 end;
 
 initialization

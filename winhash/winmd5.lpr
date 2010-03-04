@@ -15,6 +15,7 @@ uses {$IFDEF UNIX} {$IFDEF UseCThreads}
 
 begin
   {$I winmd5.lrs}
+  Application.Initialize;
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TForm2, Form2);
   Application.Run;
